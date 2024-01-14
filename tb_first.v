@@ -16,17 +16,14 @@ end
 initial begin
     $dumpfile("out.vcd"); //This VCD file will contain information about signal value changes during the simulation.
     $dumpvars;  //The $dumpvars system task is used to specify which variables should be included in the VCD file. It tells the simulator to record the changes in the values of the selected variables during the simulation.
-    #5 $finish;
+    #10 $finish; //This simulation will terminate after a delay of 5 time units.
 end
 
 endmodule
 
 
+//Note: reg elements can be used as output within an actual module declaration. But,reg elements cannot be connected to the output port of a module instantiation. Thus, a reg can drive a wire as RHS of an assign statement. On the other way round, a wire can drive a reg in as RHS of a procedural block.
 
-
-reg elements can be used as output within an actual module declaration. But,reg elements cannot be connected to the output port of a module instantiation.
-
-Thus, a reg can drive a wire as RHS of an assign statement. On the other way round, a wire can drive a reg in as RHS of a procedural block.
 
 
 
