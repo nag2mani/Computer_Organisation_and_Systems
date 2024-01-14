@@ -22,8 +22,34 @@
 
 // endmodule
 
-
 // //Note: reg elements can be used as output within an actual module declaration. But,reg elements cannot be connected to the output port of a module instantiation. Thus, a reg can drive a wire as RHS of an assign statement. On the other way round, a wire can drive a reg in as RHS of a procedural block.
+
+
+
+
+
+// //This is for and logic.
+// `include "first.v"
+// module tb_first;
+// reg a,b;
+// wire c;
+// first f1(a,b,c);
+
+// initial begin
+//     $monitor("input=%b, input=%b, output=%b\n", a, b, c);
+//     #2 a=1'b0; b=1'b0;
+//     #2 a=1'b1; b=1'b0;
+//     #2 a=1'b0; b=1'b1;
+//     #2 a=1'b1; b=1'b1;
+// end
+
+// initial begin
+//  $dumpfile("out.vcd");
+//  $dumpvars;
+//  #16 $finish;
+// end
+
+// endmodule
 
 
 
@@ -32,9 +58,9 @@
 //This is for and logic.
 `include "first.v"
 module tb_first;
-reg a,b;
+reg a, b;
 wire c;
-first f1(a,b,c);
+first f2(a, b, c);
 
 initial begin
     $monitor("input=%b, input=%b, output=%b\n", a, b, c);
@@ -51,4 +77,7 @@ initial begin
 end
 
 endmodule
+
+
+
 

@@ -7,34 +7,51 @@
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
-S_0x55dd613d2d90 .scope module, "tb_first" "tb_first" 2 3;
+S_0x565054f96be0 .scope module, "tb_first" "tb_first" 2 60;
  .timescale 0 0;
-v0x55dd6141bd40_0 .var "a", 0 0;
-v0x55dd6141bde0_0 .net "b", 0 0, L_0x55dd6141beb0;  1 drivers
-S_0x55dd613d2f20 .scope module, "f1" "first" 2 9, 3 1 0, S_0x55dd613d2d90;
+v0x565054fa8c70_0 .var "a", 0 0;
+v0x565054fa8d40_0 .var "b", 0 0;
+v0x565054fa8e10_0 .net "c", 0 0, L_0x565054fa8f10;  1 drivers
+S_0x565054f96d70 .scope module, "f2" "first" 2 63, 3 23 0, S_0x565054f96be0;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
-L_0x55dd6141beb0 .functor NOT 1, v0x55dd6141bd40_0, C4<0>, C4<0>, C4<0>;
-v0x55dd613d4ba0_0 .net "a", 0 0, v0x55dd6141bd40_0;  1 drivers
-v0x55dd6141bc20_0 .net "b", 0 0, L_0x55dd6141beb0;  alias, 1 drivers
-    .scope S_0x55dd613d2d90;
+    .port_info 2 /OUTPUT 1 "c";
+L_0x565054fa8f10 .functor OR 1, v0x565054fa8c70_0, v0x565054fa8d40_0, C4<0>, C4<0>;
+v0x565054f5fba0_0 .net "a", 0 0, v0x565054fa8c70_0;  1 drivers
+v0x565054fa8a90_0 .net "b", 0 0, v0x565054fa8d40_0;  1 drivers
+v0x565054fa8b50_0 .net "c", 0 0, L_0x565054fa8f10;  alias, 1 drivers
+    .scope S_0x565054f96be0;
 T_0 ;
-    %vpi_call 2 13 "$monitor", "input = %b, output=%b\012", v0x55dd6141bd40_0, v0x55dd6141bde0_0 {0 0 0};
+    %vpi_call 2 66 "$monitor", "input=%b, input=%b, output=%b\012", v0x565054fa8c70_0, v0x565054fa8d40_0, v0x565054fa8e10_0 {0 0 0};
     %delay 2, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55dd6141bd40_0, 0, 1;
+    %store/vec4 v0x565054fa8c70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x565054fa8d40_0, 0, 1;
     %delay 2, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55dd6141bd40_0, 0, 1;
+    %store/vec4 v0x565054fa8c70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x565054fa8d40_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x565054fa8c70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x565054fa8d40_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x565054fa8c70_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x565054fa8d40_0, 0, 1;
     %end;
     .thread T_0;
-    .scope S_0x55dd613d2d90;
+    .scope S_0x565054f96be0;
 T_1 ;
-    %vpi_call 2 22 "$dumpfile", "out.vcd" {0 0 0};
-    %vpi_call 2 23 "$dumpvars" {0 0 0};
-    %delay 5, 0;
-    %vpi_call 2 24 "$finish" {0 0 0};
+    %vpi_call 2 74 "$dumpfile", "out.vcd" {0 0 0};
+    %vpi_call 2 75 "$dumpvars" {0 0 0};
+    %delay 16, 0;
+    %vpi_call 2 76 "$finish" {0 0 0};
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
