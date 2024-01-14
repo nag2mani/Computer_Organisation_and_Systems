@@ -28,9 +28,20 @@
 
 
 
-//This is for XOR logic.
+// //This is for XOR logic.
+// module first(a, b, c);
+// input a,b;
+// output c;
+// assign c = a ^ b;
+// endmodule
+
+
+
+
+
+//This is for NOR logic.
 module first(a, b, c);
 input a,b;
 output c;
-assign c = a ^ b;
+assign c = ~(a | b);  // for nor logic ~(A | B)
 endmodule
