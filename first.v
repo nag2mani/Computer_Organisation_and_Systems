@@ -19,11 +19,18 @@
 
 
 
-//This is for and logic.
+// //This is for and logic.
+// module first(a, b, c);
+// input a, b;
+// output c;
+// assign c = a | b;
+// endmodule
+
+
+
+//This is for XOR logic.
 module first(a, b, c);
-input a, b;
+input a,b;
 output c;
-assign c = a | b;
+assign c = a ^ b;
 endmodule
-
-

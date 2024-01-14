@@ -1,5 +1,5 @@
 $date
-	Sun Jan 14 14:04:09 2024
+	Sun Jan 14 14:34:43 2024
 $end
 $version
 	Icarus Verilog
@@ -11,7 +11,7 @@ $scope module tb_first $end
 $var wire 1 ! c $end
 $var reg 1 " a $end
 $var reg 1 # b $end
-$scope module f2 $end
+$scope module it_is_instance_of_first_module $end
 $var wire 1 " a $end
 $var wire 1 # b $end
 $var wire 1 ! c $end
@@ -35,5 +35,6 @@ $end
 1#
 0"
 #8
+0!
 1"
-#16
+#20
