@@ -39,9 +39,21 @@
 
 
 
-//This is for NOR logic.
+// //This is for NOR logic.
+// module first(a, b, c);
+// input a,b;
+// output c;
+// assign c = ~(a | b);  // for nor logic ~(A | B)
+// endmodule
+
+
+
+
+
+//This is for Nand logic.
 module first(a, b, c);
 input a,b;
 output c;
-assign c = ~(a | b);  // for nor logic ~(A | B)
+assign c = ~(a & b);  // for nor logic ~(A & B)
 endmodule
+
