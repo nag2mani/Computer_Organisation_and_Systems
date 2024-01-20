@@ -1,11 +1,11 @@
 //This is to test and logic.
 
-`include "first.v"
-module tb_first;
+`include "and_logic.v"
+module and_logic_tb;
 
 reg a, b;
 wire c;
-first it_is_instance_of_first_module(a, b, c);
+and_logic it_is_instance_of_first_module(a, b, c);
 
 initial begin
     $monitor("input=%b, input=%b, output=%b\n", a, b, c);

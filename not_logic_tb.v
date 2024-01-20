@@ -1,24 +1,23 @@
 //This is to test not logic.
 
-`include "first.v"
-module tb_first;
+`include "not_logic.v"
+module not_logic_tb();
 
-reg a, b;
-wire c;
-first it_is_instance_of_first_module(a, b, c);
+reg a;
+wire b;
+
+not_logic f1(a, b);
 
 initial begin
-    $monitor("input=%b, input=%b, output=%b\n", a, b, c);
-    #2 a=1'b0; b=1'b0;
-    #2 a=1'b1; b=1'b0;
-    #2 a=1'b0; b=1'b1;
-    #2 a=1'b1; b=1'b1;
+    $monitor("input = %b, output=%b\n", a, b);
+    #2 a=1'b0;
+    #2 a=1'b1;
 end
 
 initial begin
     $dumpfile("out.vcd");
     $dumpvars;
-    #20 $finish;
+    #10 $finish;
 end
 
 endmodule

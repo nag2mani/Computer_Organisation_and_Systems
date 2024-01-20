@@ -1,10 +1,10 @@
 //This is to test Nand logic.
-`include "first.v"
-module tb_first;
+`include "nor_logic.v"
+module nor_logic_tb;
 
 reg a, b;
 wire c;
-first it_is_instance_of_first_module(a, b, c);
+nor_logic it_is_instance_of_first_module(a, b, c);
 
 initial begin
     $monitor("input=%b, input=%b, output=%b\n", a, b, c);

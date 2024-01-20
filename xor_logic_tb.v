@@ -1,11 +1,11 @@
 //This is to test xor logic.
 
-`include "first.v"
-module tb_first;
+`include "xor_logic.v"
+module xor_logic_tb;
 
 reg a, b;
 wire c;
-first it_is_instance_of_first_module(a, b, c);
+xor_logic it_is_instance_of_first_module(a, b, c);
 
 initial begin
     $monitor("input=%b, input=%b, output=%b\n", a, b, c);

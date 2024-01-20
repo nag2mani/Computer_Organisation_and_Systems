@@ -1,11 +1,11 @@
 //This is to test Xnor logic.
 
-`include "first.v"
-module tb_first;
+`include "xnor_logic.v"
+module xnor_logic_tb;
 
 reg a, b;
 wire c;
-first it_is_instance_of_first_module(a, b, c);
+xnor_logic it_is_instance_of_first_module(a, b, c);
 
 initial begin
     $monitor("input=%b, input=%b, output=%b\n", a, b, c);

@@ -1,5 +1,5 @@
 //This is for or logic.
-module first(a, b, c);
+module or_logic(a, b, c);
 input a, b;
 output c;
 assign c = a | b;
