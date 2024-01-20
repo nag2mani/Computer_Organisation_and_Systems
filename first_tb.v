@@ -25,9 +25,6 @@
 // //Note: reg elements can be used as output within an actual module declaration. But,reg elements cannot be connected to the output port of a module instantiation. Thus, a reg can drive a wire as RHS of an assign statement. On the other way round, a wire can drive a reg in as RHS of a procedural block.
 
 
-
-
-
 //This is to test all logic.
 `include "first.v"
 module tb_first;
@@ -51,9 +48,3 @@ initial begin
 end
 
 endmodule
-
-
-
-
-
-
