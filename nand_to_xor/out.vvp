@@ -1,0 +1,109 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55a4eca50bc0 .scope module, "xor_logic_tb" "xor_logic_tb" 2 4;
+ .timescale 0 0;
+v0x55a4eca6a2f0_0 .var "a", 0 0;
+v0x55a4eca6a390_0 .var "b", 0 0;
+v0x55a4eca6a450_0 .net "c", 0 0, L_0x55a4eca6aaa0;  1 drivers
+S_0x55a4eca50d50 .scope module, "it_is_instance_of_first_module" "xor_logic" 2 8, 3 3 0, S_0x55a4eca50bc0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+v0x55a4eca69d60_0 .net "a", 0 0, v0x55a4eca6a2f0_0;  1 drivers
+v0x55a4eca69e50_0 .net "b", 0 0, v0x55a4eca6a390_0;  1 drivers
+v0x55a4eca69f60_0 .net "c", 0 0, L_0x55a4eca6aaa0;  alias, 1 drivers
+v0x55a4eca6a000_0 .net "w1", 0 0, L_0x55a4eca6a5b0;  1 drivers
+v0x55a4eca6a0a0_0 .net "w2", 0 0, L_0x55a4eca6a740;  1 drivers
+v0x55a4eca6a1e0_0 .net "w3", 0 0, L_0x55a4eca6a860;  1 drivers
+S_0x55a4eca52bc0 .scope module, "n1" "nand_logic" 3 9, 4 2 0, S_0x55a4eca50d50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+L_0x55a4eca6a540 .functor AND 1, v0x55a4eca6a2f0_0, v0x55a4eca6a390_0, C4<1>, C4<1>;
+L_0x55a4eca6a5b0 .functor NOT 1, L_0x55a4eca6a540, C4<0>, C4<0>, C4<0>;
+v0x55a4eca52df0_0 .net *"_ivl_0", 0 0, L_0x55a4eca6a540;  1 drivers
+v0x55a4eca68990_0 .net "a", 0 0, v0x55a4eca6a2f0_0;  alias, 1 drivers
+v0x55a4eca68a50_0 .net "b", 0 0, v0x55a4eca6a390_0;  alias, 1 drivers
+v0x55a4eca68af0_0 .net "c", 0 0, L_0x55a4eca6a5b0;  alias, 1 drivers
+S_0x55a4eca68c30 .scope module, "n2" "nand_logic" 3 10, 4 2 0, S_0x55a4eca50d50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+L_0x55a4eca6a6b0 .functor AND 1, v0x55a4eca6a2f0_0, L_0x55a4eca6a5b0, C4<1>, C4<1>;
+L_0x55a4eca6a740 .functor NOT 1, L_0x55a4eca6a6b0, C4<0>, C4<0>, C4<0>;
+v0x55a4eca68e60_0 .net *"_ivl_0", 0 0, L_0x55a4eca6a6b0;  1 drivers
+v0x55a4eca68f60_0 .net "a", 0 0, v0x55a4eca6a2f0_0;  alias, 1 drivers
+v0x55a4eca69020_0 .net "b", 0 0, L_0x55a4eca6a5b0;  alias, 1 drivers
+v0x55a4eca690c0_0 .net "c", 0 0, L_0x55a4eca6a740;  alias, 1 drivers
+S_0x55a4eca69180 .scope module, "n3" "nand_logic" 3 11, 4 2 0, S_0x55a4eca50d50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+L_0x55a4eca6a7d0 .functor AND 1, v0x55a4eca6a390_0, L_0x55a4eca6a5b0, C4<1>, C4<1>;
+L_0x55a4eca6a860 .functor NOT 1, L_0x55a4eca6a7d0, C4<0>, C4<0>, C4<0>;
+v0x55a4eca693e0_0 .net *"_ivl_0", 0 0, L_0x55a4eca6a7d0;  1 drivers
+v0x55a4eca694c0_0 .net "a", 0 0, v0x55a4eca6a390_0;  alias, 1 drivers
+v0x55a4eca695b0_0 .net "b", 0 0, L_0x55a4eca6a5b0;  alias, 1 drivers
+v0x55a4eca696d0_0 .net "c", 0 0, L_0x55a4eca6a860;  alias, 1 drivers
+S_0x55a4eca697b0 .scope module, "n4" "nand_logic" 3 12, 4 2 0, S_0x55a4eca50d50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "c";
+L_0x55a4eca6a8f0 .functor AND 1, L_0x55a4eca6a740, L_0x55a4eca6a860, C4<1>, C4<1>;
+L_0x55a4eca6aaa0 .functor NOT 1, L_0x55a4eca6a8f0, C4<0>, C4<0>, C4<0>;
+v0x55a4eca699e0_0 .net *"_ivl_0", 0 0, L_0x55a4eca6a8f0;  1 drivers
+v0x55a4eca69ae0_0 .net "a", 0 0, L_0x55a4eca6a740;  alias, 1 drivers
+v0x55a4eca69ba0_0 .net "b", 0 0, L_0x55a4eca6a860;  alias, 1 drivers
+v0x55a4eca69ca0_0 .net "c", 0 0, L_0x55a4eca6aaa0;  alias, 1 drivers
+    .scope S_0x55a4eca50bc0;
+T_0 ;
+    %vpi_call 2 11 "$monitor", "input=%b, input=%b, output=%b\012", v0x55a4eca6a2f0_0, v0x55a4eca6a390_0, v0x55a4eca6a450_0 {0 0 0};
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a4eca6a2f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a4eca6a390_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55a4eca6a2f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a4eca6a390_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55a4eca6a2f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55a4eca6a390_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55a4eca6a2f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55a4eca6a390_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x55a4eca50bc0;
+T_1 ;
+    %vpi_call 2 19 "$dumpfile", "out.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars" {0 0 0};
+    %delay 20, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "xor_logic_tb.v";
+    "./xor_logic.v";
+    "./nand_logic.v";
