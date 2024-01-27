@@ -10,3 +10,4 @@ module OrGate(a, b, c);
     norGate p2(w1, w1, c);
 
 endmodule
+
