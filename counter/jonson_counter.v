@@ -1,8 +1,5 @@
-module j_cunter(input clk,
-input reset,
-output reg [0:3]counter
-);
-    
+module j_cunter(input clk, input reset, output reg [0:3]counter);
+
 always @(posedge clk) begin
 if(reset) counter <=4'd0;
 else begin
@@ -14,3 +11,4 @@ end
 end
 
 endmodule
+

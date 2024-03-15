@@ -12,8 +12,6 @@ forever begin
 end
 end
 
-
-
 initial begin
 $monitor("counter=%d", counter);
 
