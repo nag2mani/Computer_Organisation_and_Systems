@@ -1,0 +1,33 @@
+wsl --install
+wsl --install -d ubuntu
+
+
+sudo apt-get install iverilog
+sudo apt-get install gtkwave
+
+
+dir or ls
+mkdir filename
+rm filename, rmdir directoryname
+mv filename filepath
+cp filename filepath
+
+
+vim filename
+press i
+: wq enter
+
+head -5 filename
+du -h filename
+
+
+iverilog tb_first.v -o out.vvp
+vvp out.vvp
+gtkwave out.vcd
+
+
+//what is fipflok.
+
+In Boolean Algebra, the NAND and NOR gates are called universal gates 
+because any digital circuit can be implemented by using any one of these two 
+i.e. any logic gate can be created using NAND or NOR gates only
